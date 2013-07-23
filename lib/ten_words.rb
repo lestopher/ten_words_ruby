@@ -20,7 +20,7 @@ class TenWords
   private
 
   def sanitize(data)
-    data.downcase.gsub(/[\,\:\;\.\&\n]/, '')
+    data.downcase.gsub(/[\,\:\;\.\&\n\r\"\'\(\)\-0-9]/, ' ')
   end
 
   def count_words
